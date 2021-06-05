@@ -30,11 +30,14 @@ cd /var/www/okd4  <p>
 rm -rf install_dir <p>
 mkdir install_dir <p>
 cp install-config.yaml install_dir/. <p>
-./openshift-install create manifests --dir=install_dir/
-sed -i 's/mastersSchedulable: true/mastersSchedulable: False/' install_dir/manifests/cluster-scheduler-02-config.yml
-cp cluster-network-03-config.yml install_dir/manifests/cluster-network-03-config.yml
-./openshift-install create ignition-configs --dir=install_dir/
-cp fedora-coreos* install_dir/.
-chown -R apache:apache .
+./openshift-install create manifests --dir=install_dir/ <p>
+sed -i 's/mastersSchedulable: true/mastersSchedulable: False/' install_dir/manifests/cluster-scheduler-02-config.yml <p>
+cp cluster-network-03-config.yml install_dir/manifests/cluster-network-03-config.yml <p>
+./openshift-install create ignition-configs --dir=install_dir/ <p>
+cp fedora-coreos* install_dir/.  <p>
+chown -R apache:apache . <p>
+
+## [Workstation] Test http
+curl http://<worksation ip>/okd4/master.ign
 
   
