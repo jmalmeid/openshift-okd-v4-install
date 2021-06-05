@@ -26,7 +26,7 @@ platform:
 
 fips: false 
 
-pullSecret: '<Register in Redhat and generate acess in redhat.io>'
+pullSecret: '<Register in Redhat and generate acess in redhat.io - https://access.redhat.com/RegistryAuthentication>'
 
 
 sshKey: 'ssh-ed25519 <public key -> sshkeygen -t ed25519>'
