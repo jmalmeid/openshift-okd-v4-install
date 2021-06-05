@@ -1,4 +1,5 @@
-# INSTALLATION STEPS.md
+# WORKSTATION STEPS.md
+Login as root in workstation
 
 ## [Workstation] Install HTTPD
 apt update <p>
