@@ -32,13 +32,13 @@ Disk: 500Gb
     mode tcp
 
     option tcplog
-backend openshift-api-server
-balance source
-mode tcp
-server bootstrap 192.168.1.96:6443 check
-server master0 192.168.1.97:6443 check
-server master1 192.168.1.98:6443 check
-server master2 192.168.1.99:6443 check
+### backend openshift-api-server
+### balance source
+### mode tcp
+#### server bootstrap 192.168.1.96:6443 check
+#### server master0 192.168.1.97:6443 check
+#### server master1 192.168.1.98:6443 check
+#### server master2 192.168.1.99:6443 check
 ## 2 - frontend machine-config-server
 bind *:22623
 default_backend machine-config-server
