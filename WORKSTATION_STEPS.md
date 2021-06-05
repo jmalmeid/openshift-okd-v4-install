@@ -38,6 +38,6 @@ cp fedora-coreos* install_dir/.  <p>
 chown -R apache:apache . <p>
 
 ## [Workstation] Test http
-curl http://<worksation ip>/okd4/master.ign
+curl http://192.168.1.11/okd4/master.ign
 
   
