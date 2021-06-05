@@ -39,10 +39,10 @@ Disk: 500Gb
 backend openshift-api-server <p>
 balance source <p>
 mode tcp <p>
-server bootstrap 192.168.1.4:6443 check <p>
 server master0 192.168.1.1:6443 check <p>
 server master1 192.168.1.2:6443 check <p>
 server master2 192.168.1.3:6443 check <p>
+server master3 192.168.1.4:6443 check <p>
 
 ## 2 - frontend machine-config-server (192.168.1.30)
 
@@ -56,10 +56,10 @@ server master2 192.168.1.3:6443 check <p>
 backend machine-config-server <p>
 balance source <p>
 mode tcp <p>
-server bootstrap 192.168.1.4:22623 check <p>
 server master0 192.168.1.1:22623 check <p>
 server master1 192.168.1.2:22623 check <p>
 server master2 192.168.1.3:22623 check <p>
+server master3 192.168.1.4:22623 check <p>
 ## 3 - frontend ingress-http (192.168.1.31)
 
     bind *:80
@@ -105,7 +105,7 @@ openshift-lab4.example.com.		3600	IN	A	192.168.1.30 <p>
 api.cloud-lab4.example.com.		3600	IN	A	192.168.1.30 <p> 
 api-int.cloud-lab4.example.com.	3600	IN	A	192.168.1.30 <p> 
 *.apps.cloud-lab4.example.com.	3600	IN	A	192.168.1.31 <p> 
-bootstrap.cloud-lab4.example.com.	3600	IN	CNAME   server4.example.com. <p> 
+bootstrap.cloud-lab4.example.com.	3600	IN	CNAME   server1.example.com. <p> 
 master0.cloud-lab4.example.com.	3600	IN	CNAME   server1.example.com. <p> 
 master1.cloud-lab4.example.com.	3600	IN	CNAME	server2.example.com. <p> 
 master2.cloud-lab4.example.com.	3600	IN	CNAME   server3.example.com. <p> 
@@ -122,4 +122,5 @@ _etcd-server-ssl._tcp.cloud-lab4.example.com. 3600 IN SRV 0 10 2380 etcd-1.cloud
 _etcd-server-ssl._tcp.cloud-lab4.example.com. 3600 IN SRV 0 10 2380 etcd-2.cloud-lab4.example.com. <p> 
 _etcd-server-ssl._tcp.cloud-lab4.example.com. 3600 IN SRV 0 10 2380 etcd-3.cloud-lab4.example.com.  
     
-## VIEW INSTALLATION_STEPS.md
+## INSTALL
+1_INSTALL    
