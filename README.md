@@ -5,6 +5,7 @@
 # Notes
 - Installation going to be throwgh console and boot iso
 - Boostrap node is going to be reinstalled in a master node
+- All the servers and workstation with access direct to internet 
 - IPs are an example
 
 # Hardware
