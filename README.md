@@ -97,7 +97,8 @@ server3.example.com.	3600	IN	  A	192.168.1.3 <p>
 server4.example.com.	3600	IN	  A	192.168.1.4 <p> 
 server5.example.com.	3600	IN	  A	192.168.1.5 <p> 
 server6.example.com.	3600	IN	  A	192.168.1.6 <p> 
-server7.example.com.	3600	IN	  A	192.168.1.7 <p> 
+server7.example.com.	3600	IN	  A	192.168.1.7 <p>
+workstation.example.com.	3600	IN	  A	192.168.1.11 <p> 
  <p> 
 openshift-lab4.example.com.		3600	IN	A	192.168.1.30 <p> 
 api.cloud-lab4.example.com.		3600	IN	A	192.168.1.30 <p> 
