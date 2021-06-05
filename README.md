@@ -32,21 +32,14 @@ Disk: 500Gb
     mode tcp
 
     option tcplog
- backend openshift-api-server <p>
- balance source
- mode tcp
- server bootstrap 192.168.1.96:6443 check
- server master0 192.168.1.97:6443 check
- server master1 192.168.1.98:6443 check
- server master2 192.168.1.99:6443 check
+backend openshift-api-server <p>
+balance source <p>
+mode tcp <p>
+server bootstrap 192.168.1.6:6443 check <p>
+server master0 192.168.1.1:6443 check <p>
+server master1 192.168.1.2:6443 check <p>
+server master2 192.168.1.3:6443 check <p>
 
-### backend openshift-api-server
-### balance source
-### mode tcp
-#### server bootstrap 192.168.1.96:6443 check
-#### server master0 192.168.1.97:6443 check
-#### server master1 192.168.1.98:6443 check
-#### server master2 192.168.1.99:6443 check
 ## 2 - frontend machine-config-server
 
     bind *:22623
@@ -56,19 +49,13 @@ Disk: 500Gb
     mode tcp
 
     option tcplog
-bind *:22623
-default_backend machine-config-server
-mode tcp
-option tcplog
-
-
-backend machine-config-server
-balance source
-mode tcp
-server bootstrap 192.168.1.96:22623 check
-server master0 192.168.1.97:22623 check
-server master1 192.168.1.98:22623 check
-server master2 192.168.1.99:22623 check 
+backend machine-config-server <p>
+balance source <p>
+mode tcp <p>
+server bootstrap 192.168.1.6:22623 check <p>
+server master0 192.168.1.1:22623 check <p>
+server master1 192.168.1.2:22623 check <p>
+server master2 192.168.1.3:22623 check <p>
 ## 3 - frontend ingress-http
 
     bind *:80
@@ -78,10 +65,29 @@ server master2 192.168.1.99:22623 check
     mode tcp
 
     option tcplog
-backend ingress-http
-balance source
-mode tcp
-server worker0 192.168.1.11:80 check
-server worker1 192.168.1.7:80 check
+backend ingress-http <p>
+balance source <p>
+mode tcp <p>
+server worker0 192.168.1.4:80 check <p>
+server worker1 192.168.1.5:80 check <p>
+server worker2 192.168.1.6:80 check <p>
+## 3 - frontend ingress-https
 
+    bind *:443
+
+    default_backend ingress-https
+
+    mode tcp
+
+    option tcplog
+backend ingress-https <p>
+balance source <p>
+mode tcp <p>
+server worker0 192.168.1.4:443 check <p>
+server worker1 192.168.1.5:443 check <p>
+server worker2 192.168.1.6:443 check <p>
+    
+# DNS
+    
+    
 ## VIEW INSTALLATION_STEPS.md
