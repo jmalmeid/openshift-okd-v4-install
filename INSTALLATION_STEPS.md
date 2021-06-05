@@ -5,10 +5,10 @@ apt update <p>
 apt upgrade <p>
 apt install curl wget httpd  <p>
 mkdir -p /var/www/okd4/install_dir  <p>
-chown -R apache:apache /var/www/okd4 
-cp okd4.conf /etc/httpd/conf.d/okd4.conf
-systemctl enable httpd
-systemctl start httpd
+chown -R apache:apache /var/www/okd4 <p>
+cp okd4.conf /etc/httpd/conf.d/okd4.conf <p>
+systemctl enable httpd <p>
+systemctl start httpd <p>
 
 ## [Workstation] Get install binary
 cd /var/www/okd4  <p>
