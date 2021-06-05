@@ -32,7 +32,7 @@ Disk: 500Gb
     mode tcp
 
     option tcplog
- backend openshift-api-server
+ backend openshift-api-server <p>
  balance source
  mode tcp
  server bootstrap 192.168.1.96:6443 check
