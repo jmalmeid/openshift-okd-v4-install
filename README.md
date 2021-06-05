@@ -129,4 +129,3 @@ _etcd-server-ssl._tcp.cloud-lab4.example.com. 3600 IN SRV 0 10 2380 etcd-3.cloud
 4_WORKSTATION_STEPS.md <p>    
 5_TRANSFORM_BOOTSTRAP_MASTER.md <p>
 6_WORKSTATION_STEPS.md <p>    
-5_    
