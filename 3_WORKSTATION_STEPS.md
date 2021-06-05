@@ -1,13 +1,13 @@
-#
+# WORKSTATION STEPS.md
+Login as root in workstation
 
-# 3 # Verify NODES
-$ export KUBECONFIG=/var/www/okd4/install_dir/auth/kubeconfig
-$ ./oc get csr
-$ ./oc get csr -o name | xargs ./oc adm certificate approve
-$ ./oc get nodes
+## [Workstation] Verify Nodes
+export KUBECONFIG=/var/www/okd4/install_dir/auth/kubeconfig <p>
+./oc get csr <p>
+./oc get csr -o name | xargs ./oc adm certificate approve <p>
+./oc get nodes <p>
 
-# 3 #  WAIT BOOTSTRAP
+## [Workstation] Wait for terminate the bootsrap
+./openshift-install --dir=install_dir/ wait-for bootstrap-complete --log-level=debug <p>
 
-$ ./openshift-install --dir=install_dir/ wait-for bootstrap-complete --log-level=debug
-$ watch -n5 ./oc get clusteroperators
-$ ./openshift-install --dir=install_dir/ wait-for install-complete --log-level=debug
+ 
