@@ -1,6 +1,6 @@
 # INSTALLATION STEPS.md
 
-## Get install binary
+## [Workstation] Get install binary
 apt update <p>
 apt upgrade <p>
 apt install curl wget httpd  <p>
