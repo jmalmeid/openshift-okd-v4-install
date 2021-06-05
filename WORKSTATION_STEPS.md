@@ -25,4 +25,16 @@ tar xvfz openshift-install-linux-4.5.0-0.okd-2020-10-15-235428.tar.gz -C . <p>
 Edit install-config.yaml <p>
 Edit cluster-network-03-config.yml
 
-## [Workstation]  
+## [Workstation] Prepare files
+cd /var/www/okd4  <p>
+rm -rf install_dir <p>
+mkdir install_dir <p>
+cp install-config.yaml install_dir/. <p>
+./openshift-install create manifests --dir=install_dir/
+sed -i 's/mastersSchedulable: true/mastersSchedulable: False/' install_dir/manifests/cluster-scheduler-02-config.yml
+cp cluster-network-03-config.yml install_dir/manifests/cluster-network-03-config.yml
+./openshift-install create ignition-configs --dir=install_dir/
+cp fedora-coreos* install_dir/.
+chown -R apache:apache .
+
+  
