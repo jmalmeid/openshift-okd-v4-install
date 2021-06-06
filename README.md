@@ -39,6 +39,8 @@ Disk: 500Gb
 backend openshift-api-server <p>
 balance source <p>
 mode tcp <p>
+option httpchk GET /healthz <p>
+http-check expect string ok <p>
 server master0 192.168.1.1:6443 check <p>
 server master1 192.168.1.2:6443 check <p>
 server master2 192.168.1.3:6443 check <p>
@@ -56,6 +58,8 @@ server master3 192.168.1.4:6443 check <p>
 backend machine-config-server <p>
 balance source <p>
 mode tcp <p>
+option httpchk GET /healthz <p>
+http-check expect string ok <p>   
 server master0 192.168.1.1:22623 check <p>
 server master1 192.168.1.2:22623 check <p>
 server master2 192.168.1.3:22623 check <p>
@@ -75,7 +79,11 @@ mode tcp <p>
 server worker0 192.168.1.5:80 check <p>
 server worker1 192.168.1.6:80 check <p>
 server worker2 192.168.1.7:80 check <p>
-## 3 - frontend ingress-https (192.168.1.31)
+
+Healthcheck:  http://<server>:1936/healthz <p>
+String: ok  <p>
+
+## 4 - frontend ingress-https (192.168.1.31)
 
     bind *:443
 
@@ -91,6 +99,9 @@ server worker0 192.168.1.5:443 check <p>
 server worker1 192.168.1.6:443 check <p>
 server worker2 192.168.1.7:443 check <p>
 
+Healthcheck: http://<server>:1936/healthz <p>
+String: ok <p>
+    
 # DNS
 server1.example.com.	3600	IN	  A	192.168.1.1 <p> 
 server2.example.com.	3600	IN	  A	192.168.1.2 <p> 
