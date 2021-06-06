@@ -1,7 +1,7 @@
 apiVersion: v1
 baseDomain: example.com
 metadata:
-  name: cloud-lab4
+  name: lab4
 
 compute:
 - hyperthreading: Enabled
