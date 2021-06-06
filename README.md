@@ -113,25 +113,25 @@ server7.example.com.	3600	IN	  A	192.168.1.7 <p>
 workstation.example.com.	3600	IN	  A	192.168.1.11 <p> 
  <p> 
 openshift-lab4.example.com.		3600	IN	A	192.168.1.30 <p> 
-api.cloud-lab4.example.com.		3600	IN	A	192.168.1.30 <p> 
-api-int.cloud-lab4.example.com.	3600	IN	A	192.168.1.30 <p> 
-*.apps.cloud-lab4.example.com.	3600	IN	A	192.168.1.31 <p> 
-bootstrap.cloud-lab4.example.com.	3600	IN	CNAME   server1.example.com. <p> 
-master0.cloud-lab4.example.com.	3600	IN	CNAME   server1.example.com. <p> 
-master1.cloud-lab4.example.com.	3600	IN	CNAME	server2.example.com. <p> 
-master2.cloud-lab4.example.com.	3600	IN	CNAME   server3.example.com. <p> 
-master3.cloud-lab4.example.com.	3600	IN	CNAME   server4.example.com. <p> 
-worker0.cloud-lab4.example.com.	3600	IN	CNAME   server5.example.com. <p> 
-worker1.cloud-lab4.example.com.	3600	IN	CNAME	server6.example.com.  <p> 
-worker2.cloud-lab4.example.com.	3600	IN	CNAME	server7.example.com. <p> 
-etcd-0.cloud-lab4.example.com.	3600	IN	CNAME   server1.example.com. <p> 
-etcd-1.cloud-lab4.example.com.	3600	IN	CNAME	server2.example.com. <p> 
-etcd-2.cloud-lab4.example.com.	3600	IN	CNAME   server3.example.com. <p> 
-etcd-3.cloud-lab4.example.com.	3600	IN	CNAME   server4.example.com. <p> 
-_etcd-server-ssl._tcp.cloud-lab4.example.com. 3600 IN SRV 0 10 2380 etcd-0.cloud-lab4.example.com. <p> 
-_etcd-server-ssl._tcp.cloud-lab4.example.com. 3600 IN SRV 0 10 2380 etcd-1.cloud-lab4.example.com. <p> 
-_etcd-server-ssl._tcp.cloud-lab4.example.com. 3600 IN SRV 0 10 2380 etcd-2.cloud-lab4.example.com. <p> 
-_etcd-server-ssl._tcp.cloud-lab4.example.com. 3600 IN SRV 0 10 2380 etcd-3.cloud-lab4.example.com.  
+api.lab4.example.com.		3600	IN	A	192.168.1.30 <p> 
+api-int.lab4.example.com.	3600	IN	A	192.168.1.30 <p> 
+*.apps.lab4.example.com.	3600	IN	A	192.168.1.31 <p> 
+bootstrap.lab4.example.com.	3600	IN	CNAME   server1.example.com. <p> 
+master0.lab4.example.com.	3600	IN	CNAME   server1.example.com. <p> 
+master1.lab4.example.com.	3600	IN	CNAME	server2.example.com. <p> 
+master2.lab4.example.com.	3600	IN	CNAME   server3.example.com. <p> 
+master3.lab4.example.com.	3600	IN	CNAME   server4.example.com. <p> 
+worker0.lab4.example.com.	3600	IN	CNAME   server5.example.com. <p> 
+worker1.lab4.example.com.	3600	IN	CNAME	server6.example.com.  <p> 
+worker2.lab4.example.com.	3600	IN	CNAME	server7.example.com. <p> 
+etcd-0.lab4.example.com.	3600	IN	CNAME   server1.example.com. <p> 
+etcd-1.lab4.example.com.	3600	IN	CNAME	server2.example.com. <p> 
+etcd-2.lab4.example.com.	3600	IN	CNAME   server3.example.com. <p> 
+etcd-3.lab4.example.com.	3600	IN	CNAME   server4.example.com. <p> 
+_etcd-server-ssl._tcp.lab4.example.com. 3600 IN SRV 0 10 2380 etcd-0.lab4.example.com. <p> 
+_etcd-server-ssl._tcp.lab4.example.com. 3600 IN SRV 0 10 2380 etcd-1.lab4.example.com. <p> 
+_etcd-server-ssl._tcp.lab4.example.com. 3600 IN SRV 0 10 2380 etcd-2.lab4.example.com. <p> 
+_etcd-server-ssl._tcp.lab4.example.com. 3600 IN SRV 0 10 2380 etcd-3.lab4.example.com.  
     
 ## INSTALL
 1_WORKSTATION_STEPS.md <p>
